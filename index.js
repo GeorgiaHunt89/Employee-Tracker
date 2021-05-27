@@ -1,39 +1,43 @@
 const inquirer = require('inquirer');
-const {prompt} = require('inquirer');
-const { prompt } = require('inquirer');
-const db = require('./db');
-const userPrompts = require(.'/userPrompts');
+// const db = require('./db');
+const connection = require('./connection');
+const userPrompts = require('./userPrompts');
+
+const employeeInformation = [];
 
 // Function to load prompts in NPM
-const loadPrompts = async () => {
-const userInput = await prompts ([userPrompts]);
-
+const callPrompts = async () => {
+    console.log('Welcome to the Employee Tracker')
+    const userInput = await inquirer.prompt(userPrompts);
 
 // Calls function chosen by user 
-switch (userInput) {
-    case 'View_Departments':
-        return viewAllDepartments();
+switch (userInput.inputSelection) {
+    case 'addEntry':
+            addEntry();
             break;
-    case 'View_Roles':
-        return viewAllRoles(); 
+    case 'viewEntry':
+            viewEntry(); 
             break;
-    case 'View_Employees':
-        return viewAllEmployees(); 
+    case 'updateEntry':
+            updateEntry(); 
             break;      
-    case 'Add_Department':
-        return addADepartment(); 
-            break; 
-    case 'Add_Role':
-         return addARole(); 
-             break;
-    case 'Add_Employee':
-        return addAnEmployee(); 
-            break; 
-    case 'Update_Employees':
-        return updateEmployee(); 
-            break; 
     default:
-        return quite(); 
+        Quit(); 
 }
-}
+console.log('You have chosen ', userInput.inputSelection);
+};
 
+// Creates database records
+// Add Entry function 
+const addEntry = async () => {
+        const addEntryInput = await inquirer.prompt({
+                        type: 'list',
+                        name: 'selectEntryType',
+                        message: 'What type of entry to you wish to add?',
+                        choices: ['Add Department', 'Add Role', 'Add Employee', 'Quit'],
+                });
+        };
+
+
+
+callPrompts()
