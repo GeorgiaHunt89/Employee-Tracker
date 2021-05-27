@@ -16,10 +16,6 @@ const userPrompts = [
             name: 'Delete an Entry',
             value: 'deleteEntry'
         },
-        {
-            name: 'Quit',
-            value: 'Quit'
-        },
     ]
 }
 

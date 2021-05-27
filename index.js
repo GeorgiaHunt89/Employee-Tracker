@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 // const db = require('./db');
 const connection = require('./connection');
 const userPrompts = require('./userPrompts');
+const addDepartment = require('./Add Entry files/addDepartment');
 
 const employeeInformation = [];
 
@@ -21,8 +22,6 @@ switch (userInput.inputSelection) {
     case 'updateEntry':
             updateEntry(); 
             break;      
-    default:
-        Quit(); 
 }
 console.log('You have chosen ', userInput.inputSelection);
 };
@@ -34,9 +33,23 @@ const addEntry = async () => {
                         type: 'list',
                         name: 'selectEntryType',
                         message: 'What type of entry to you wish to add?',
-                        choices: ['Add Department', 'Add Role', 'Add Employee', 'Quit'],
+                        choices: ['Add Department', 'Add Role', 'Add Employee'],
                 });
-        };
+// Calls function chosen by user 
+switch (addEntryInput.entryInputSelection) {
+        case 'addDepartment':
+                addDepartment();
+                break;
+        case 'viewRole':
+                viewRole(); 
+                break;
+        case 'updateEmployee':
+                updateEmployee(); 
+                break;      
+    }
+    console.log('You have chosen ', addEntryInput.entryInputSelection);
+};
+
 
 
 
