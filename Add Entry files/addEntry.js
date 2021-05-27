@@ -1,4 +1,3 @@
-
 // Creates database records
 // Add Entry function 
 const addEntry = async () => {
