@@ -8,48 +8,23 @@ const employeeInformation = [];
 
 // Function to load prompts in NPM
 const callPrompts = async () => {
-    console.log('Welcome to the Employee Tracker')
-    const userInput = await inquirer.prompt(userPrompts);
+        console.log('Welcome to the Employee Tracker')
+        const userInput = await inquirer.prompt(userPrompts);
 
-// Calls function chosen by user 
-switch (userInput.inputSelection) {
-    case 'addEntry':
-            addEntry();
-            break;
-    case 'viewEntry':
-            viewEntry(); 
-            break;
-    case 'updateEntry':
-            updateEntry(); 
-            break;      
-}
-console.log('You have chosen ', userInput.inputSelection);
-};
-
-// Creates database records
-// Add Entry function 
-const addEntry = async () => {
-        const addEntryInput = await inquirer.prompt({
-                        type: 'list',
-                        name: 'selectEntryType',
-                        message: 'What type of entry to you wish to add?',
-                        choices: ['Add Department', 'Add Role', 'Add Employee'],
-                });
-// Calls function chosen by user 
-switch (addEntryInput.entryInputSelection) {
-        case 'addDepartment':
-                addDepartment();
+        // Calls function chosen by user 
+        switch (userInput.inputSelection) {
+        case 'addEntry':
+                addEntry();
                 break;
-        case 'viewRole':
-                viewRole(); 
+        case 'viewEntry':
+                viewEntry(); 
                 break;
-        case 'updateEmployee':
-                updateEmployee(); 
+        case 'updateEntry':
+                updateEntry(); 
                 break;      
-    }
-    console.log('You have chosen ', addEntryInput.entryInputSelection);
+        }
+        console.log('You have chosen ', userInput.inputSelection);
 };
-
 
 
 
