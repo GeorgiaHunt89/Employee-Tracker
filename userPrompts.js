@@ -1,7 +1,7 @@
 const userPrompts = [
 {
     type: 'list',
-    name: 'choice',
+    name: 'inputChoices',
     message: 'What would you like to choose?',
     choices: [
         {
