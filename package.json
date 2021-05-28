@@ -1,0 +1,25 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "A content managing system for managing a company's employees using node, inquirer, and MySQL.",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^8.1.0",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgiaHunt89/Employee-Tracker.git"
+  },
+  "author": "Georgia Hunt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeorgiaHunt89/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/GeorgiaHunt89/Employee-Tracker#readme"
+}
