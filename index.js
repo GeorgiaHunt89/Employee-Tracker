@@ -1,10 +1,9 @@
 const inquirer = require('inquirer');
 // const db = require('./db');
 const connection = require('./connection');
+const addEntry = require('./Add Entry files/addEntry');
 const userPrompts = require('./userPrompts');
-const addDepartment = require('./Add Entry files/addDepartment');
 
-const employeeInformation = [];
 
 // Function to load prompts in NPM
 const callPrompts = async () => {
@@ -14,18 +13,16 @@ const callPrompts = async () => {
         // Calls function chosen by user 
         switch (userInput.inputSelection) {
         case 'addEntry':
-                addEntry();
-                break;
+                return addEntry();
         case 'viewEntry':
-                viewEntry(); 
-                break;
+                return viewEntry(); 
         case 'updateEntry':
-                updateEntry(); 
-                break;      
+                return updateEntry(); 
+        default:
+                return connection.end();         
         }
-        console.log('You have chosen ', userInput.inputSelection);
 };
 
+callPrompts();
 
 
-callPrompts()
