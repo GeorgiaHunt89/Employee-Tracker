@@ -1,7 +1,5 @@
-const inquirer = require("inquirer");
 const queryDB = require("./utils");
-
-    
+ 
 
 // Function to add new employee
 const addEmployee = async () => {
