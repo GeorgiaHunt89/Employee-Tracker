@@ -1,24 +1,28 @@
+const inquirer = require("inquirer");
+const addRole = require('./addRole');
+const addEmployee = require('./addEmployee');
+const addDepartment = require('./addDepartment');
+
 // Creates database records
 // Add Entry function 
-const addEntry = async () => {
-    const addEntryInput = await inquirer.prompt({
+addEntry = async () => {
+    const addEntry = await inquirer.prompt({
                     type: 'list',
                     name: 'selectEntryType',
-                    message: 'What type of entry to you wish to add?',
+                    message: 'What type of entry do you wish to add?',
                     choices: ['Add Department', 'Add Role', 'Add Employee'],
             });
 // Calls function chosen by user 
-switch (addEntryInput.entryInputSelection) {
+switch (addEntry.entryInputSelection) {
     case 'addDepartment':
-            addDepartment();
-            break;
-    case 'addRole':
-            addRole(); 
-            break;
-    case 'addEmployee':
-            addEmployee(); 
-            break;      
-}
-console.log('You have chosen ', addEntryInput.entryInputSelection);
-};
+            return addDepartment();
 
+    case 'addRole':
+            return addRole(); 
+            
+    case 'addEmployee':
+            return addEmployee(); 
+    
+}
+};
+addEntry();
