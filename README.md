@@ -1,15 +1,14 @@
 
-#Employee Tracker
+# Employee Tracker
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
         
-*[Description](#description),
-​*[Installation Instructions](#installation),
-*​[Usage Information](#usage),
-*[Contributors](#contributors),
-​*[Test Instructions](#testing),
-*[Deployment Link](#deployment),
-*[Questions](#questions),
-*​[License](#license),
+[Description](#description)
+​[Installation Instructions](#installation)
+[Usage Information](#usage)
+[Contributors](#contributors)
+[Deployment Link](#deployment)
+[Questions](#questions)
+[License](#license)
 
 
 ## Description
