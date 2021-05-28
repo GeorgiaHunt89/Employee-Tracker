@@ -12,3 +12,9 @@ CREATE TABLE roles (
     FOREIGN KEY (department_id),
     REFERENCES department(id)
 );
+
+CREATE TABLE departments (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30),
+    PRIMARY KEY (id)
+);
