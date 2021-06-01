@@ -6,7 +6,8 @@
 [Installation Instructions](#installation)<br>
 [Usage Information](#usage)<br>
 [Contributors](#contributors)<br>
-[Deployment Link](#deployment)<br>
+[Deployment Links](#deployment)<br>
+[Walkthrough Video Links](#walkthrough)<br>
 [Questions](#questions)<br>
 [License](#license)
 
@@ -23,7 +24,7 @@ This project allows the user to easily create, seed and access databases in MySQ
 ## Contributors
 Georgia Hunt 
 
-## Deployment Link
+## Deployment Links
 https://github.com/GeorgiaHunt89/Employee-Tracker <br>
 https://dashboard.heroku.com/apps/gh-employee-tracker
 
