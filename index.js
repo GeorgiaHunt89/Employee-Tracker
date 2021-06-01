@@ -3,13 +3,14 @@ const connection = require('./connection');
 const addEntry = require('./Add Entry files/addEntry');
 const viewEntry = require('./View Entry files/viewEntry');
 const updateEntry = require('./Update Entry files/updateEntry');
+const deleteEntry = require('./Delete files/deleteEntries')
 const userPrompts = require('./userPrompts');
 
 
 // Function to load prompts in NPM
 const callPrompts = async () => {
         console.log('Welcome to the Employee Tracker')
-        const userInput = await (userPrompts);
+        const userInput = await inquirer.prompt ({userPrompts});
 
         // Calls function chosen by user 
         switch (userInput.inputSelection) {
@@ -22,6 +23,9 @@ const callPrompts = async () => {
         case 'updateEntry':
                 updateEntry();
                 break; 
+        case 'deleteEntry':
+                deleteEntry();
+                break;
         default:
                 return connection.end();         
         }
