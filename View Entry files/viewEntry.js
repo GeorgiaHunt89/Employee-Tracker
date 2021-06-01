@@ -3,6 +3,9 @@ const inquirer = require("inquirer");
 const connection = require("../connection");
 const viewAllDepartments = require('./viewDepartment');
 const viewAllRoles = require('./viewRoles');
+const viewAllEmployees = require('./viewEmployees');
+const viewAllRolesByDepartment = require('./viewRolesByDepartment');
+const viewAllEmployeesByRole = require('./viewEmployeesByRole');
 
 // View Entry function 
 const viewEntry = async () => {
