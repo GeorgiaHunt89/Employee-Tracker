@@ -4,13 +4,14 @@
   "description": "A content managing system for managing a company's employees using node, inquirer, and MySQL.",
   "main": "index.js",
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^8.1.0",
     "mysql2": "^2.2.5"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
