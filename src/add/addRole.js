@@ -27,7 +27,9 @@ const addRole = async () => {
             title: answer.title,
             salary: answer.salary,
             department_id: answer.departmentId
-        })
+        });
+    console.log('Successfully created new role')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = addRole;

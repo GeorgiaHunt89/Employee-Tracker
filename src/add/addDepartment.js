@@ -13,7 +13,8 @@ const addDepartment = async () => {
     ])
     // Insert new department into DB
     await queryDB('INSERT INTO department SET department_name = ?', [ answer.department ]);
-    console.log('Successfully created department');
+    console.log('Successfully created department')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = addDepartment;

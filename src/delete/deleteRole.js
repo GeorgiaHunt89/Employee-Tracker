@@ -18,11 +18,13 @@ const deleteRole = async () => {
         },
     ])
     // Delete employee from DB
-    await queryDB('DELETE FROM role SET ?',
+    await queryDB('DELETE FROM role WHERE role_id = ?',
     {
         first_name: answer.firstName,
         role_id: answer.roleId,
-    })
+    });
+    console.log('Successfully deleted role')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = deleteRole;

@@ -29,13 +29,15 @@ const addEmployee = async () => {
 
     ])
     // Insert new employee into DB
-    await queryDB('INSERT INTO role SET ?',
+    await queryDB('INSERT INTO employee SET ?',
     {
         first_name: answer.firstName,
         last_name: answer.lastName,
         role_id: answer.roleId,
         manager_id: answer.managerId
-    })
+    });
+    console.log('Successfully created new employee')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = addEmployee;

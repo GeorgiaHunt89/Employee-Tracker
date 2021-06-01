@@ -13,8 +13,9 @@ const deleteDepartment = async () => {
           }
       ])
       // Delete department listing stored into DB
-      await queryDB('DELETE FROM department WHERE department = ?',[ answer.department ])
-      console.table(`Department: ${department}`)
+      await queryDB('DELETE FROM department WHERE department_name = ?',[ answer.department ]);
+    console.log('Successfully deleted department')
+    console.log('-------------------------------------------------' );
   };
   
   module.exports = deleteDepartment;

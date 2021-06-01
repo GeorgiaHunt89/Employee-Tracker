@@ -25,17 +25,18 @@ const deleteEmployee = async () => {
             name: 'managerId',
             type: 'input',
             message: 'Please enter the ID of the employee manager [if none, enter null]:'
-        }
-
+        },
     ])
     // Delete employee from DB
-    await queryDB('DELETE FROM employee SET ?',
+    await queryDB('DELETE FROM employee WHERE role_id = ?',
     {
         first_name: answer.firstName,
         last_name: answer.lastName,
         role_id: answer.roleId,
         manager_id: answer.managerId
-    })
+    });
+    console.log('Successfully deleted employee')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = deleteEmployee;

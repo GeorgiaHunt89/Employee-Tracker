@@ -31,7 +31,9 @@ const updateRole = async () => {
     {
         employeeRoleUpdate,
         roleUpdate,
-    })
+    });
+    console.log('Successfully updated role')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = updateRole;

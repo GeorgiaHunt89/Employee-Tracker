@@ -31,7 +31,9 @@ const updateDepartment = async () => {
     {
         departmentRoleUpdate: employee.departmentRoleUpdate,
         roleUpdate: role.roleUpdate,
-    })
+    });
+    console.log('Successfully updated department')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = updateDepartment;

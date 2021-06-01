@@ -35,7 +35,9 @@ const updateEmployee = async () => {
         last_name: answer.lastName,
         role_id: answer.roleId,
         manager_id: answer.managerId
-    })
+    });
+    console.log('Successfully updated employee')
+    console.log('-------------------------------------------------' );
 };
 
 module.exports = updateEmployee;
