@@ -1,4 +1,4 @@
-const queryDB = require('./utlis');
+const queryDB = require('./utils');
 const inquirer = require("inquirer");
 
 // Function to view all roles
