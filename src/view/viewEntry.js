@@ -1,6 +1,6 @@
 // Reads database records
 const inquirer = require("inquirer");
-const connection = require("../connection");
+const connection = require("../../connection");
 const viewAllDepartments = require('./viewDepartment');
 const viewAllRoles = require('./viewRoles');
 const viewAllEmployees = require('./viewEmployees');

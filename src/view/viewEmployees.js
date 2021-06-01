@@ -1,4 +1,4 @@
-const queryDB = require('./utils');
+const queryDB = require('../utils');
 const inquirer = require("inquirer");
 
 // Function to view all employees

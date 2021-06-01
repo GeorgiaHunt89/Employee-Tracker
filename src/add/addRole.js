@@ -1,10 +1,10 @@
-const queryDB = require("./utils");
+const queryDB = require("../utils");
 const inquirer = require("inquirer");
 
 // Function to post new role
 const addRole = async () => {
     // Prompt for title of role being stored
-    const answer = await inquirer.prompt ([
+    const answer = await inquirer.prompt([
         {
             name: 'title',
             type: 'input',
@@ -23,11 +23,11 @@ const addRole = async () => {
     ])
     // Insert new role into DB
     await queryDB('INSERT INTO role SET ?',
-    {
-        title: answer.title,
-        salary: answer.salary,
-        department_id: answer.departmentId
-    })
+        {
+            title: answer.title,
+            salary: answer.salary,
+            department_id: answer.departmentId
+        })
 };
 
 module.exports = addRole;

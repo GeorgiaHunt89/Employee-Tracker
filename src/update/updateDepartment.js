@@ -1,7 +1,7 @@
-const queryDB = require("./utils");
+const queryDB = require("../utils");
 const inquirer = require("inquirer");
-const addEmployee = require("../Add Entry files/addEmployee");
-const addRole = require("../Add Entry files/addRole");
+const addEmployee = require("../addEmployee");
+const addRole = require("../addRole");
 
 // Function to update department
 const updateDepartment = async () => {

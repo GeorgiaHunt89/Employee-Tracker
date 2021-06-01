@@ -1,6 +1,6 @@
-const queryDB = require('./utils');
+const queryDB = require('../utils');
 const inquirer = require("inquirer");
-const userPrompts = require('../userPrompts');
+const userPrompts = require('../userPrompts').default;
 
 // Function to view all employees by role
 const viewAllEmployeesByRole = async () => {

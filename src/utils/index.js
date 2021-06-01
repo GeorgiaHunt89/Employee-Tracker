@@ -1,4 +1,4 @@
-const connection = require("../connection");
+const connection = require("../../connection");
 
 async function queryDB(query, data = []) {
     return new Promise((resolve, reject) => { 

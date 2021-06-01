@@ -1,25 +1,25 @@
-const queryDB = require("./utils");
+const queryDB = require("../utils");
 const inquirer = require("inquirer");
  
 
-// Function to add new employee
-const addEmployee = async () => {
-  // Prompt for name of new employee being stored
+// Function to update employee
+const updateEmployee = async () => {
+  // Prompt for name of employee being updated
     const answer = await inquirer.prompt ([
         {
             name: 'firstName',
             type: 'input',
-            message: 'Please enter the first name of the employee you would like to add:'
+            message: 'Please enter the first name of the employee you would like to update:'
         },
         {
             name: 'lastName',
             type: 'input',
-            message: 'Please enter the employees last name:'
+            message: 'Please enter the last name of the employee:'
         },
         {
             name: 'roleId',
             type: 'input',
-            message: 'Please enter the employees id:',
+            message: 'Please enter the employee id:',
         },
         {
             name: 'managerId',
@@ -28,7 +28,7 @@ const addEmployee = async () => {
         }
 
     ])
-    // Insert new employee into DB
+    // Insert updated employee into DB
     await queryDB('INSERT INTO role SET ?',
     {
         first_name: answer.firstName,
@@ -38,4 +38,4 @@ const addEmployee = async () => {
     })
 };
 
-module.exports = addEmployee;
+module.exports = updateEmployee;
