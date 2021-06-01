@@ -6,15 +6,19 @@ const userPrompts = [
     choices: [
         {
             name: 'Add an Entry',
-            value: 'addEntry'
+            value: 'addEntry',
         },
         {
             name: 'View an Entry',
-            value: 'viewEntry'
+            value: 'viewEntry',
+        },
+        {
+            name: 'Update an Entry',
+            value: 'updateEntry',
         },
         {
             name: 'Delete an Entry',
-            value: 'deleteEntry'
+            value: 'deleteEntry',
         },
     ]
 }

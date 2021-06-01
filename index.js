@@ -3,7 +3,7 @@ const connection = require('./connection');
 const addEntry = require('./Add Entry files/addEntry');
 const viewEntry = require('./View Entry files/viewEntry');
 const updateEntry = require('./Update Entry files/updateEntry');
-const deleteEntry = require('./Delete files/deleteEntries')
+const deleteEntry = require('./Delete files/deleteEntires');
 const userPrompts = require('./userPrompts');
 
 
