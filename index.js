@@ -1,4 +1,3 @@
-const inquirer = require('inquirer');
 const connection = require('./connection');
 const addEntry = require('./src/add/addEntry');
 const viewEntry = require('./src/view/viewEntry');
@@ -9,27 +8,28 @@ const userPrompts = require('./src/userPrompts');
 
 // Function to load prompts in NPM
 const callPrompts = async () => {
-        console.log('Welcome to the Employee Tracker')
-        const userInput = await inquirer.prompt ({userPrompts});
-
+        console.log('Welcome to the Employee Tracker');
+        const userInput = await userPrompts();
+        console.log({userInput});
         // Calls function chosen by user 
-        switch (userInput.inputSelection) {
+        switch (userInput) {
         case 'addEntry':
-                addEntry();
+                await addEntry();
                 break;
         case 'viewEntry':
-                viewEntry(); 
+                await viewEntry(); 
                 break;
         case 'updateEntry':
-                updateEntry();
+                await updateEntry();
                 break; 
         case 'deleteEntry':
-                deleteEntry();
+                await deleteEntry();
                 break;
         default:
                 return connection.end();         
         }
 
+        callPrompts();
 };
 
 callPrompts();
