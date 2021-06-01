@@ -1,10 +1,10 @@
 const inquirer = require('inquirer');
 const connection = require('./connection');
-const addEntry = require('./Add Entry files/addEntry');
-const viewEntry = require('./View Entry files/viewEntry');
-const updateEntry = require('./Update Entry files/updateEntry');
-const deleteEntry = require('./Delete files/deleteEntires');
-const userPrompts = require('./userPrompts');
+const addEntry = require('./src/add/addEntry');
+const viewEntry = require('./src/view/viewEntry');
+const updateEntry = require('./src/update/updateEntry');
+const deleteEntry = require('./src/delete/deleteEntires');
+const userPrompts = require('./src/userPrompts');
 
 
 // Function to load prompts in NPM
