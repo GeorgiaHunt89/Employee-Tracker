@@ -1,4 +1,5 @@
 const queryDB = require("./utils");
+const inquirer = require("inquirer");
  
 
 // Function to add new employee
