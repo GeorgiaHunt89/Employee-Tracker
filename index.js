@@ -9,7 +9,7 @@ const userPrompts = require('./userPrompts');
 // Function to load prompts in NPM
 const callPrompts = async () => {
         console.log('Welcome to the Employee Tracker')
-        const userInput = await inquirer.prompt(userPrompts);
+        const userInput = await (userPrompts);
 
         // Calls function chosen by user 
         switch (userInput.inputSelection) {
