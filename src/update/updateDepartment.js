@@ -1,7 +1,7 @@
 const queryDB = require("../utils");
 const inquirer = require("inquirer");
-const addEmployee = require("../addEmployee");
-const addRole = require("../addRole");
+const addDepartment = require("../add/addDepartment");
+const addRole = require("../add/addRole");
 
 // Function to update department
 const updateDepartment = async () => {
@@ -27,10 +27,10 @@ const updateDepartment = async () => {
     ])
     
     // Insert new role into DB
-    await queryDB('UPDATE department SET department_id = ? WHERE id = ?',
+    await queryDB('UPDATE department, role SET department_id = ?, department_name = ? WHERE id = ?, title= ?',
     {
-        employeeRoleUpdate,
-        roleUpdate,
+        departmentRoleUpdate: employee.departmentRoleUpdate,
+        roleUpdate: role.roleUpdate,
     })
 };
 
