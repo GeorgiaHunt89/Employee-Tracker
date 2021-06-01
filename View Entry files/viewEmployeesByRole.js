@@ -1,5 +1,6 @@
-const queryDB = require('./utlis');
+const queryDB = require('./utils');
 const inquirer = require("inquirer");
+const userPrompts = require('../userPrompts');
 
 // Function to view all employees by role
 const viewAllEmployeesByRole = async () => {
@@ -16,3 +17,5 @@ const viewAllEmployeesByRole = async () => {
       console.table(`Role_id: ${role_id}`)
   };
   viewAllEmployeesByRole();
+  
+  
