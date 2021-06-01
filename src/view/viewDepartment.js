@@ -16,5 +16,6 @@ const viewAllDepartments = async () => {
       await queryDB('SELECT * FROM department',[ answer.department ])
       console.table(`Department: ${department}`)
   };
-  viewAllDepartments();
+  
+module.exports = viewAllDepartments;
   

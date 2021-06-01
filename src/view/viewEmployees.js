@@ -15,4 +15,5 @@ const viewAllEmployees = async () => {
       await queryDB('SELECT * FROM employee',[ answer.employee ])
       console.table(`Employee: ${employee}`)
   };
-  viewAllEmployees();
+  
+module.exports = viewAllEmployees;

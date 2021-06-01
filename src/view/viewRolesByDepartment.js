@@ -15,4 +15,5 @@ const viewAllRolesByDepartment = async () => {
       await queryDB('SELECT department_id FROM role',[ answer.department_id ])
       console.table(`Department_id: ${department_id}`)
   };
-  viewAllRolesByDepartment();
+  
+  module.exports = viewAllRolesByDepartment;

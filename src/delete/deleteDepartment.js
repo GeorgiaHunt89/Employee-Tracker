@@ -16,4 +16,5 @@ const deleteDepartment = async () => {
       await queryDB('DELETE FROM department WHERE department = ?',[ answer.department ])
       console.table(`Department: ${department}`)
   };
-  deleteDepartment();
+  
+  module.exports = deleteDepartment;

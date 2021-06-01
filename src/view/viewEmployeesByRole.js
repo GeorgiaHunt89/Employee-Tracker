@@ -1,6 +1,5 @@
 const queryDB = require('../utils');
 const inquirer = require("inquirer");
-const userPrompts = require('../userPrompts').default;
 
 // Function to view all employees by role
 const viewAllEmployeesByRole = async () => {
@@ -16,6 +15,8 @@ const viewAllEmployeesByRole = async () => {
       await queryDB('SELECT role_id FROM employee',[ answer.role_id ])
       console.table(`Role_id: ${role_id}`)
   };
-  viewAllEmployeesByRole();
+  
+  
+module.exports = viewAllEmployeesByRole;
   
   

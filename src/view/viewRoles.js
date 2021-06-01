@@ -15,4 +15,5 @@ const viewAllRoles = async () => {
       await queryDB('SELECT * FROM role',[ answer.role ])
       console.table(`Role: ${role}`)
   };
-  viewAllRoles();
+  
+  module.exports = viewAllRoles;
