@@ -24,7 +24,13 @@ This project allows the user to easily create, seed and access databases in MySQ
 Georgia Hunt 
 
 ## Deployment Link
-https://github.com/GeorgiaHunt89/Employee-Tracker
+https://github.com/GeorgiaHunt89/Employee-Tracker <br>
+https://dashboard.heroku.com/apps/gh-employee-tracker
+
+## Walkthrough Video Links
+[Seeding data to MySQL](https://www.loom.com/share/6662d39177434c9191f5212546e27662) <br>
+
+[Add Entry -> Add Department -> Add Role -> Add Employee](https://www.loom.com/share/7fe5523e94f548ab95cea03e9a7c4aff)
 
 ## Questions
 I would love to hear your feedback, please don't hesitate to contact me via email at [georgialhunt89@gmail.com](mailto;georgialhunt89@gmail.com) or visit my profile on [GitHub](https://github.com/georgiahunt89)
