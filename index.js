@@ -1,3 +1,4 @@
+//Constructors
 const connection = require('./connection');
 const addEntry = require('./src/add/addEntry');
 const viewEntry = require('./src/view/viewEntry');
