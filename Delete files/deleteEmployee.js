@@ -29,7 +29,7 @@ const deleteEmployee = async () => {
 
     ])
     // Delete employee from DB
-    await queryDB('DELETE FROM role SET ?',
+    await queryDB('DELETE FROM employee SET ?',
     {
         first_name: answer.firstName,
         last_name: answer.lastName,
