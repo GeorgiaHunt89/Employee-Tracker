@@ -1,7 +1,9 @@
 // Create connection to MYSQL
 
 const mysql = require('mysql2');
-
+const consoleTable = require('console.table');
+require("dotenv").config();
+const inquirer = require("inquirer");
 
 const connection = mysql.createConnection({
     host: 'localhost',
