@@ -1,4 +1,4 @@
--- add department
+USE employee_trackerDB;
 
 INSERT INTO department (id, department_name)
 VALUES (1, "Marketing");
@@ -16,7 +16,7 @@ INSERT INTO department (id, department_name)
 VALUES (5, "Associates");
 
 
--- add role
+
 
 
 INSERT INTO role (id, title, salary, department_id)
@@ -50,7 +50,6 @@ INSERT INTO role (id, title, salary, department_id)
 VALUES (10, "CEO", 150000, 5);
 
 
--- add employee
 
 
 INSERT INTO employee (id, first_name, last_name, role_id, manager_id)

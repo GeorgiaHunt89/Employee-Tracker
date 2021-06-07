@@ -12,8 +12,8 @@ const viewAllRolesByDepartment = async () => {
           }
       ])
       // View role listing stored into DB
-      await queryDB('SELECT department_id FROM role',[ answer.department_id ])
-      console.table(`Department_id: ${department_id}`)
+      await queryDB('SELECT department_id FROM role',[ answer.name ])
+      console.table(`Department_id: ${answer.name}`)
   };
   
   module.exports = viewAllRolesByDepartment;

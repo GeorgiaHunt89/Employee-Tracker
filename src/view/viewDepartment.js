@@ -1,21 +1,22 @@
 const queryDB = require('../utils');
 const inquirer = require("inquirer");
+const consoleTable = require('console.table');
 
 
 
 // Function to view all departments
 const viewAllDepartments = async () => {
-    // Prompt for department search list
-      const answer = await inquirer.prompt ([
-          {
-              name: 'department',
-              type: 'input',
-              message: 'Please enter the name of the department you would like to view:'
-          }
-      ])
+    // Prompt for department list
+      console.log("Loading all departments...\n")
       // View department listing stored into DB
-      await queryDB('SELECT * FROM department',[ answer.department ])
-        console.table(res);
+      await queryDB('SELECT * FROM department',function (err, res) {
+        if (err) {
+            console.error(err);
+        } else {
+            // Log all results of the SELECT statement
+            console.table(res);
+        }
+      })
   };
-  
+
 module.exports = viewAllDepartments;

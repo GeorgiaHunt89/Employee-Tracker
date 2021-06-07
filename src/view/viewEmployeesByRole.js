@@ -6,14 +6,14 @@ const viewAllEmployeesByRole = async () => {
     // Prompt for role search list
       const answer = await inquirer.prompt ([
           {
-              name: 'role_id',
+              name: 'role_title',
               type: 'input',
               message: 'Please enter the role id you would like to view employees by:'
           }
       ])
       // View role listing stored into DB
-      await queryDB('SELECT role_id FROM employee',[ answer.role_id ])
-      console.table(`Role_id: ${role_id}`)
+      await queryDB('SELECT role_title FROM employee',[ answer.name  ])
+      console.table(`Role_id: ${answer.name}`)
   };
   
   

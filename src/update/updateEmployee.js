@@ -34,7 +34,7 @@ const updateEmployee = async () => {
         first_name: answer.firstName,
         last_name: answer.lastName,
         role_id: answer.roleId,
-        manager_id: answer.managerId
+        manager_id: answer.managerId.value
     });
     console.log('Successfully updated employee')
     console.log('-------------------------------------------------' );

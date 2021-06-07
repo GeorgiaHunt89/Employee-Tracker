@@ -1,19 +1,21 @@
 const queryDB = require('../utils');
 const inquirer = require("inquirer");
+const consoleTable = require('console.table');
 
 // Function to view all employees
 const viewAllEmployees = async () => {
     // Prompt for role search list
-      const answer = await inquirer.prompt ([
-          {
-              name: 'employee',
-              type: 'input',
-              message: 'Please enter the name of the employee you would like to view:'
-          }
-      ])
+    console.log("Loading all employees...\n")
       // View role listing stored into DB
-      await queryDB('SELECT * FROM employee',[ answer.employee ])
-      console.table(`Employee: ${employee}`)
+      await queryDB('SELECT * FROM employee', function (err, res) {
+        if (err) {
+            console.error(err);
+        } else {
+            // Log all results of the SELECT statement
+            console.table(res);
+        }
+      })
   };
   
 module.exports = viewAllEmployees;
+

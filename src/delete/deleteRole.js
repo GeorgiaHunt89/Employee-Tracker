@@ -7,21 +7,21 @@ const deleteRole = async () => {
     // Prompt for role search list
       const answer = await inquirer.prompt ([
         {
-            name: 'firstName',
+            name: 'Title',
             type: 'input',
-            message: 'Please enter the first name of the employee you would like to delete:'
+            message: 'Please enter the name of the role you would like to delete:'
         },
         {
-            name: 'roleId',
+            name: 'departmentId',
             type: 'input',
-            message: 'Please enter the employee id:',
+            message: 'Please enter the roles id number:',
         },
     ])
     // Delete employee from DB
     await queryDB('DELETE FROM role WHERE role_id = ?',
     {
-        first_name: answer.firstName,
-        role_id: answer.roleId,
+        title: answer.title,
+        department_id: answer.departmentId
     });
     console.log('Successfully deleted role')
     console.log('-------------------------------------------------' );

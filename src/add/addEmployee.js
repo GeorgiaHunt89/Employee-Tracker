@@ -34,7 +34,7 @@ const addEmployee = async () => {
         first_name: answer.firstName,
         last_name: answer.lastName,
         role_id: answer.roleId,
-        manager_id: answer.managerId
+        manager_id: answer.manager_Id
     });
     console.log('Successfully created new employee')
     console.log('-------------------------------------------------' );
