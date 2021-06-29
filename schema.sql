@@ -6,20 +6,18 @@ USE employee_trackerDB;
 CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT,
     department_name VARCHAR(30),
-    PRIMARY KEY (id),
-    ON DELETE CASCADE,
-    ON UPDATE NO ACTION,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE role (
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(30),
-    salary DECIMAL(20,2),
+    salary DECIMAL(20, 2),
     department_id INT,
     PRIMARY KEY (id),
-    FOREIGN KEY (department_id) REFERENCES departments(id),
-    ON DELETE CASCADE,
-    ON UPDATE NO ACTION,
+    FOREIGN KEY (department_id) REFERENCES department(id) 
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION
 );
 
 CREATE TABLE employee (
@@ -27,11 +25,11 @@ CREATE TABLE employee (
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT,
-    manager_Id INT DEFAULT NULL,
+    manager_id INTEGER,
     PRIMARY KEY (id),
-    FOREIGN KEY (role_id) REFERENCES roles(id),
-    ON DELETE CASCADE,
-    ON UPDATE NO ACTION,
+    FOREIGN KEY (role_id) REFERENCES role(id)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION
 );
 
 
